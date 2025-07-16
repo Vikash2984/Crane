@@ -137,8 +137,3 @@ path{stroke:#000;fill:#000}
   0%,100%{stroke-dashoffset:970}
   25%,75%{stroke-dashoffset:543}
 }
-
-@media (max-width: 768px) {
-  .page-wrapper {transform: translateY(-13vh);}
-  body{background-color: #000;}
-}
