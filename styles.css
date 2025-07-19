@@ -8,7 +8,7 @@
   --bg-color: #ffffff;
   --bg-alt-color: #f8fafc;
   --transition-speed: 0.3s;
-  --nav-height: 80px;
+  --nav-height: 60px;
   --contact-links: #1e3a8a;
 
   /* Hero animation specific variables */
@@ -45,7 +45,7 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   transition: background-color var(--transition-speed), color var(--transition-speed);
-  padding-top: var(--nav-height); /* ADDED: Pushes all content down below the fixed nav */
+  padding-top: var(--nav-height); /* Pushes all content down below the fixed nav */
 }
 
 h1,
@@ -543,15 +543,23 @@ html[data-theme="dark"] .dark-mode-sun {
 
 /* Original site styles below, with hero background removed */
 .hero {
-  min-height: calc(100vh - var(--nav-height)); /* ADJUSTED: Hero height to fit below nav */
-  /* Removed original padding-top from here */
+  min-height: calc(100vh - var(--nav-height)); /* Hero height to fit below nav */
+}
+
+/* --- Adjustments for sections below hero --- */
+.about,
+.services,
+.gallery,
+.contact {
+  padding: 0.1rem 2rem; /* Consistent vertical and horizontal padding for all content sections */
 }
 
 section h2 {
-  margin-bottom: 0.5rem;
+  text-align: center; /* Center all section headings */
+  margin-bottom: 3rem; /* More space below heading */
   font-size: 2.5rem;
   color: var(--primary-color);
-  margin-left: 2rem;
+  /* Removed margin-left: 2rem; from here */
 }
 
 .about {
@@ -681,13 +689,6 @@ section h2 {
   padding-left: 1.5rem;
   position: relative;
   z-index: 2;
-}
-
-.services h2 {
-  text-align: center;
-}
-.gallery h2 {
-  text-align: center;
 }
 
 .carousel-container {
