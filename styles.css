@@ -398,6 +398,4 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   .tagline { font-size: clamp(0.85rem, 5.5vw, 1.2rem); letter-spacing: 0.05em; }
 }
 
-
 .limit { max-height: 80vh; max-width: 100vh; width: calc((768 / 1024) * 107%); bottom: 0; }
-
