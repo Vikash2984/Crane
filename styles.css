@@ -407,17 +407,22 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   nav.nav-contact { background: var(--contact-bg); }
 
   /* Mobile floating buttons */
-  .mobile-floating-buttons { display: flex; align-items: center; position: fixed; bottom: 15px; right: 0; z-index: 1000; gap: 8px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-  .mobile-floating-buttons.collapsed { transform: translateX(calc(100% - 28px)); }
-  .mobile-whatsapp-button, .mobile-call-button { display: flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; white-space: nowrap; }
+  .mobile-floating-buttons { display: flex; align-items: center; position: fixed; bottom: 20px; right: 0; z-index: 1000; }
+  .mobile-buttons-container { display: flex; align-items: center; gap: 10px; padding-left: 10px; padding-right: 10px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease; }
+  .mobile-floating-buttons.collapsed .mobile-buttons-container { transform: translateX(calc(100% + 10px)); opacity: 0; pointer-events: none; }
+  .mobile-whatsapp-button, .mobile-call-button { display: flex; align-items: center; gap: 8px; padding: 14px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25); transition: all 0.3s ease; white-space: nowrap; }
   .mobile-whatsapp-button { background: #25D366; color: white; }
   .mobile-whatsapp-button:hover { background: #128C7E; transform: translateY(-2px); }
   .mobile-call-button { background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; }
   .mobile-call-button:hover { transform: translateY(-2px); }
-  .mobile-collapse-arrow { width: 28px; height: 50px; background: rgba(0, 0, 0, 0.6); border: none; border-radius: 8px 0 0 8px; color: white; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease; flex-shrink: 0; }
-  .mobile-collapse-arrow:hover { background: rgba(0, 0, 0, 0.8); }
+  .mobile-collapse-arrow { width: 32px; height: 56px; background: rgba(0, 0, 0, 0.7); border: none; border-radius: 10px 0 0 10px; color: white; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease; flex-shrink: 0; }
+  .mobile-collapse-arrow:hover { background: rgba(0, 0, 0, 0.9); }
   .mobile-collapse-arrow span { transition: transform 0.4s ease; display: inline-block; }
   .mobile-floating-buttons.collapsed .mobile-collapse-arrow span { transform: rotate(180deg); }
+
+  /* Carousel tap to enlarge */
+  .carousel-item.enlarged { transform: scale(1.08); z-index: 10; transition: transform 0.3s ease; }
+  .carousel-item { transition: transform 0.3s ease; }
 }
 
 @media (min-width: 768px) {
