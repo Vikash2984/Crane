@@ -179,12 +179,20 @@ viewMoreBtn?.addEventListener("click", () => {
   setTimeout(() => expanded ? window.scrollTo({ top: services.getBoundingClientRect().top + window.scrollY + services.querySelector("h2").offsetHeight + 10, behavior: "smooth" }) : services.scrollIntoView({ behavior: "smooth", block: "start" }), 100)
 })
 
-// Mobile collapse/expand buttons
+// Mobile collapse/expand buttons with localStorage persistence
 document.addEventListener("DOMContentLoaded", () => {
   const collapseArrow = document.querySelector(".mobile-collapse-arrow")
   const floatingButtons = document.querySelector(".mobile-floating-buttons")
   if (collapseArrow && floatingButtons) {
-    collapseArrow.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); floatingButtons.classList.toggle("collapsed") })
+    floatingButtons.classList.add("no-transition")
+    const savedState = localStorage.getItem("floatingButtonsCollapsed")
+    if (savedState === "true") floatingButtons.classList.add("collapsed")
+    requestAnimationFrame(() => requestAnimationFrame(() => floatingButtons.classList.remove("no-transition")))
+    collapseArrow.addEventListener("click", e => {
+      e.preventDefault(); e.stopPropagation()
+      floatingButtons.classList.toggle("collapsed")
+      localStorage.setItem("floatingButtonsCollapsed", floatingButtons.classList.contains("collapsed"))
+    })
   }
 })
 
