@@ -421,6 +421,8 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   .mobile-collapse-arrow:hover { background: rgba(0, 0, 0, 0.9); }
   .mobile-collapse-arrow span { transition: transform 0.4s ease; display: inline-block; }
   .mobile-floating-buttons.collapsed .mobile-collapse-arrow span { transform: rotate(180deg); }
+  .mobile-floating-buttons.collapsed { pointer-events: none; }
+  .mobile-floating-buttons.collapsed .mobile-collapse-arrow { pointer-events: auto; }
 
   /* Carousel tap to enlarge */
   .carousel-item.enlarged { transform: scale(1.08); z-index: 10; transition: transform 0.3s ease; }
