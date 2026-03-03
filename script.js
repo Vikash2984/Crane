@@ -27,7 +27,12 @@ document.querySelectorAll(".nav-link").forEach(i => i.addEventListener("click", 
 document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", function(e) {
   e.preventDefault()
   const target = document.querySelector(this.getAttribute("href"))
-  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" })
+  if (target) {
+    if (this.getAttribute("href") === "#contact" && window.innerWidth < 768) {
+      const y = target.getBoundingClientRect().top + window.scrollY - document.querySelector("nav").offsetHeight
+      window.scrollTo({ top: y, behavior: "smooth" })
+    } else target.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 }))
 logo?.addEventListener("click", e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }) })
 
