@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click
   const target = document.querySelector(this.getAttribute("href"))
   if (target) {
     if (this.getAttribute("href") === "#contact" && window.innerWidth < 768) {
-      const y = target.getBoundingClientRect().top + window.scrollY - (document.querySelector("nav").offsetHeight-8.5)
+      const y = target.getBoundingClientRect().top + window.scrollY - (document.querySelector("nav").offsetHeight-8)
       window.scrollTo({ top: y, behavior: "smooth" })
     } else target.scrollIntoView({ behavior: "smooth", block: "start" })
   }
@@ -225,6 +225,7 @@ function updateNavbarColor() {
 window.addEventListener("scroll", updateNavbarColor)
 window.addEventListener("resize", updateNavbarColor)
 updateNavbarColor()
+
 
 
 
