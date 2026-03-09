@@ -439,8 +439,6 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   .hero-text-overlay .cta-btn { width: 130px; height: 34px; font-size: 13px; padding: 7px 16px; }
 }
 
-
-
 @media (max-width: 768px) {
 
   .contact {
@@ -448,7 +446,7 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
     min-height: auto;
     padding: 1rem 0 0 0;
   }
-
+ 
   .contact-content {
     grid-template-columns: 1fr;
     max-height: none;
@@ -459,10 +457,7 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   .contact-info,
   .contact-form {
     padding: 1rem 1rem;   
-    height: 97%;       
+    height: 85%;       
   }
 
 }
-
-
-
