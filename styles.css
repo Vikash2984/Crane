@@ -395,7 +395,7 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   .contact-form { gap: 0.6rem; }
   .form-group input, .form-group textarea { padding: 0.7rem 0.9rem; font-size: 0.85rem; }
   .form-group textarea { min-height: 70px; max-height: 90px; resize: vertical; }
-  .submit-btn { padding: 0.8rem 1.5rem; font-size: 0.85rem; margin-top: 0.3rem; }
+  .submit-btn { padding: 1.2rem 1.5rem; font-size: 0.85rem; margin-top: 0.3rem; }
   .contact footer { position: relative; bottom: auto; margin-top: auto; padding: 0.8rem 1rem 1rem; width: 100%; }
   footer p { font-size: 0.85rem; }
   .footer-content { flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.6rem; width: 100%; }
@@ -461,3 +461,4 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   }
 
 }
+
