@@ -51,7 +51,8 @@ themeToggle.addEventListener("click", () => {
 })
 
 const reveal = () => document.querySelectorAll(".reveal").forEach(el => {
-  if (el.getBoundingClientRect().top < window.innerHeight - 150) el.classList.add("active")
+  const threshold = (isMobile() && el.classList.contains("contact-info")) ? -el.offsetHeight * 0.5 : 150
+  if (el.getBoundingClientRect().top < window.innerHeight - threshold) el.classList.add("active")
 })
 window.addEventListener("scroll", reveal); reveal()
 
@@ -225,9 +226,3 @@ function updateNavbarColor() {
 window.addEventListener("scroll", updateNavbarColor)
 window.addEventListener("resize", updateNavbarColor)
 updateNavbarColor()
-
-
-
-
-
-
