@@ -442,9 +442,9 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
 @media (max-width: 768px) {
 
   .contact {
-    height: 92vh;
+    height: auto;
     min-height: auto;
-    padding: 1rem 0 0 0;
+    padding: max(calc(var(--nav-height) + 0.5rem), 5rem) 0 0 0;
   }
  
   .contact-content {
@@ -461,4 +461,3 @@ footer p { position: relative; z-index: 2; font-size: 1rem; opacity: 0.9; color:
   }
 
 }
-
